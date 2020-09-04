@@ -1,0 +1,149 @@
+
+
+/*--------------------------INTEGRANTES--------------------- */
+.body_integrantes{
+  background-color: rgb(25, 34, 46);
+  font-family: Century Gothic;
+  margin: 0px;
+  color: white;  
+}
+
+#titulo_integrantes div {
+  text-align: center;
+  background-color: rgb(33, 73, 110);
+  color: white;
+  margin: 0px;
+  padding: 40px;
+  background-image: url(../Imagenes/integrantes.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position-y: -30px;
+  zoom: 120%;
+}
+
+.indice ul {
+  list-style: none;
+  margin: 0px;
+  text-align: center;
+  background-color: rgb(20, 27, 37);
+  border-style: inset;
+  border-radius: 10px;
+  border-width: 1px 4px;
+}
+
+.indice ul li {
+  display: inline;
+}
+.indice ul li a {
+  font-size: 20px;
+  color: rgb(196, 186, 186);
+  text-decoration: none;
+  padding: 8px 10px;
+  display: inline-block;
+  border-style: inset;
+  border-radius: 5px;
+  border-width: 1px;
+  margin: 3px;
+}
+.indice ul li a:hover {
+  background-color: rgb(47, 62, 83); /* cuando el mouse se acerque*/
+  color: white;
+  border-radius: 3px;
+}
+.contenedor {
+  background-color: rgb(46, 63, 87);
+  color: aliceblue;
+  text-align: center;
+  padding: 15px;
+  margin: 20px 12px;
+  border-radius: 10px;
+  box-shadow: 3px 3px 13px rgb(255, 255, 255);
+}
+
+.info_integrante {
+  overflow: hidden;
+  background-color: rgb(56, 79, 110);
+  border-radius: 10px;
+  padding: 15px;
+  
+  
+}
+/* EDICIÓN DE LAS IMAGENES */
+.img_integrantes{
+  border-radius: 9px;
+  margin: 13px;
+  box-shadow: 5px 5px 10px  rgb(193, 196, 197);
+
+}
+#img_chester {
+  float: left;
+  width: 200px;
+}
+#img_brad {
+  float: left;
+  width: 500px;
+}
+#img_dave {
+  float: right;
+  width: 300px;
+}
+#img_joe {
+  float: right;
+  width: 300px;
+}
+#img_mike {
+  float: left;
+  width: 300px;
+}
+
+
+/* ************* CANCIONES *********** */
+
+.body_canciones{
+  color: white;
+  background-color: rgb(123, 126, 117);
+  font-family: Century Gothic;
+  
+}
+.header_logo{
+  background-image: url(img/banda.jpg);
+  padding: 30px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: auto;
+}
+.class_album{
+  background-color: rgb(54, 54, 50);
+  margin: 30px 20px;
+  padding: 10px;
+  border-radius: 20px;
+  box-shadow: 10px 10px 20px rgb(25, 34, 46);
+}
+
+.class_album p{
+  text-align: justify;
+  background-color: rgb(94, 100, 100);
+  border-radius: 20px;
+  padding: 10px;
+}
+.titulo2{
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  text-align: center;
+}
+
+
+.class_album p{
+  font-family: Century Gothic; 
+  padding: 5px 5px 5px 5px;
+  overflow:hidden
+}
+
+/* ******** iMAGENES DE LOS ALBUMES */
+#img1{
+  float: right;
+  width: 400px;
+  height: 400px;
+  
+}
+
+
