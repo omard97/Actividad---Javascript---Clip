@@ -6,6 +6,7 @@
   font-family: Century Gothic;
   margin: 0px;
   color: white;  
+  min-width: 510px;
 }
 
 #titulo_integrantes div {
@@ -18,7 +19,8 @@
   background-repeat: no-repeat;
   background-size: cover;
   background-position-y: -30px;
-  zoom: 120%;
+  zoom: 70%;
+  height: 300px;
 }
 
 .indice ul {
@@ -35,7 +37,7 @@
   display: inline;
 }
 .indice ul li a {
-  font-size: 20px;
+  font-size: 15px;
   color: rgb(196, 186, 186);
   text-decoration: none;
   padding: 8px 10px;
@@ -81,7 +83,7 @@
 }
 #img_brad {
   float: left;
-  width: 500px;
+  width: 400px;
 }
 #img_dave {
   float: right;
@@ -96,6 +98,12 @@
   width: 300px;
 }
 
+@media (max-width: 400px) {
+  .body_integrantes {
+    min-width:400 ;
+  }
+}
+
 
 /* ************* CANCIONES *********** */
 
@@ -105,12 +113,17 @@
   font-family: Century Gothic;
   
 }
-.header_logo{
-  background-image: url(img/banda.jpg);
-  padding: 30px;
+#header_logo{
+  background-image: url(img/music1.jpg);
+  margin: 0px;
   background-position: center;
-  background-repeat: no-repeat;
-  background-size: auto;
+  height: 400px;
+  text-align: center;
+  padding: 50px;
+  color: rgb(255, 255, 255);
+  font-size: 43px;
+  font-family: 'Times New Roman', Times, serif;
+ 
 }
 .class_album{
   background-color: rgb(54, 54, 50);
@@ -147,3 +160,23 @@
 }
 
 
+
+/* *************** PAGINA DEL JUEGO *************** */
+.body_juego{
+  background-color: rgb(99, 129, 38);
+}
+
+.jumbotron{
+ background-image: url(img/fondo_adivinanza.jpg);
+ background-origin: border-box;
+ color: rgb(245, 245, 245);
+ font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+.container {
+  box-shadow:  5px 5px 20px rgb(13, 63, 21);
+}
+.container p{
+  margin: 3px;
+  color: whitesmoke;
+}
