@@ -166,17 +166,51 @@
   background-color: rgb(99, 129, 38);
 }
 
+
 .jumbotron{
  background-image: url(img/fondo_adivinanza.jpg);
  background-origin: border-box;
  color: rgb(245, 245, 245);
  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+ font-size: 25px;
 }
 
+
+/* .caja_pregunta{ 
+  background-color: rgb(21, 98, 34);
+  margin: 20px;
+  border-radius: 15px;
+  padding: 30px;
+  box-shadow:  5px 5px 20px rgb(6, 46, 13);
+  
+} */
+
+/* contenedor de las preguntas */
 .container {
-  box-shadow:  5px 5px 20px rgb(13, 63, 21);
+  box-shadow:  5px 5px 20px rgb(82, 156, 88); /*sombreado de bordes*/
+  background-color: rgb(99, 129, 38); /*color de fondo*/
+  border-radius: 10px;
+  
 }
 .container p{
-  margin: 3px;
+  /* margin: 3px; */
   color: whitesmoke;
 }
+#contenedor button{
+  margin: 10px;
+}
+
+label{
+  margin: 30px;
+  color: whitesmoke;
+  font-size: 30px;
+  display: block;
+  float: left;
+}
+
+.form-control{
+  margin: 30px;
+  width: 40%;
+  text-align: center;
+}
+

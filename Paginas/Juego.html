@@ -9,7 +9,7 @@
   <link rel="stylesheet" href="../css/bootstrap.min.css">
 
   <link rel="stylesheet" href="Estilos_Paginas.css">
-  <script src="Juego.js"></script>
+
   <link rel="stylesheet" href="../css/normalize.css">
 
 
@@ -18,58 +18,80 @@
 
 <body class="body_juego">
 
-  <nav class="navbar navbar-expand-lg navbar-dark bg-dark" >
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
     <a class="navbar-brand" href="#">Paginas</a>
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02"
+      aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
-  
+
     <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
       <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
         <li class="nav-item active">
-          <a class="nav-link" href="../Index.html">Pagina Principal <span class="sr-only">(current)</span></a>
+          <a class="nav-link" href="../Index.html" target="_blank">Pagina Principal <span
+              class="sr-only">(current)</span></a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="Integrantes.html">Integrantes</a>
+          <a class="nav-link" href="Integrantes.html" target="_blank">Integrantes</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="Canciones.html" tabindex="-1" aria-disabled="true">Canciones</a>
+          <a class="nav-link" href="Canciones.html" tabindex="-1" aria-disabled="true" target="_blank">Canciones</a>
         </li>
       </ul>
-      
+
     </div>
   </nav>
   <div class="jumbotron text-center">
     <h1>Mini Juego</h1>
-    <p>Bienvenido al area entretenimiento, se va a poner a prueba su conocimiento sobre la reconocida banda de rock llamada LINKIN PARK.
-     </p>
+    <p>Bienvenido al area entretenimiento, se va a poner a prueba su conocimiento sobre la reconocida banda de rock
+      llamada LINKIN PARK.
+    </p>
   </div>
- 
-
 
   <div class="container border">
     <h2 style="text-align: center; color: white;">Consigna</h2>
-    <p>Se le mostrara un texto con una adivinanza haciendo referencia al tema del sitio web, dispondra de 4 intentos para acertar a la adivinanza, si no llega a encontrar la respues usted no es un verdadero fan de LINKIN PARK. <br>
-    SUERTE.</p>
-
+    <p>Se le mostrara un texto con una adivinanza haciendo referencia al tema del sitio web, dispondra de 4 intentos
+      para acertar a la adivinanza, si no llega a encontrar la respues usted no es un verdadero fan de LINKIN PARK. <br>
+      SUERTE.</p>
   </div>
+  <br> <br>
 
-  <!-- <div class="container">
-        <div class="row">
-          <div class="col-sm-4">
-            <h3>Column 1</h3>
-            <p>Lorem ipsum dolor..</p>
-          </div>
-          <div class="col-sm-4">
-            <h3>Column 2</h3>
-            <p>Lorem ipsum dolor..</p>
-          </div>
-          <div class="col-sm-4">
-            <h3>Column 3</h3>
-            <p>Lorem ipsum dolor..</p>
-          </div>
-        </div>
-      </div> -->
+  <div id="contenedor" class="container border">
+
+    <h2 style="text-align: center;">Pregunta</h2>
+    <p style="text-align: center;">INTENTOS:</p>
+    <p style="text-align: center;" id="Numintentos"></p>
+    <br>
+
+    <p style="text-align: center;" id="pregunta"> Cual fue el álbum debut de la banda?</p>
+    <br>
+    <p id="pregunta2"></p>
+    <!--2da pregunta para facilitar-->
+    <p id="aviso"></p>
+    <!--Aviso-->
+
+    <input id="texto" type="text" class="form-control" placeholder="Ingrese su respuesta">
+
+    <!-- <button id="boton" type="button" onclick="adivinanza()" value="envio" class="btn btn-primary">Aceptar</button> -->
+  </div>
+  <br> <br>
+  <form action="">
+
+    <div class="container border">
+      <label for="respuesta">Respuesta :</label>
+      <input id='respuesta' type="text" class="form-control" placeholder="Ingrese su respuesta">
+
+      <button type="submit" onclick=" return  adivinanza()" value="enviar" class="btn btn-primary">Aceptar</button>
+      <br><br>
+    </div>
+
+  </form>
+
+  
+
+
+
+  <script src="App.js"></script>
 
   <!-- Optional JavaScript -->
   <!-- jQuery first, then Popper.js, then Bootstrap JS -->
