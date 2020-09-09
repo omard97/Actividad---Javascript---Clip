@@ -47,47 +47,55 @@
       llamada LINKIN PARK.
     </p>
   </div>
-
-  <div class="container border">
-    <h2 style="text-align: center; color: white;">Consigna</h2>
-    <p>Se le mostrara un texto con una adivinanza haciendo referencia al tema del sitio web, dispondra de 4 intentos
-      para acertar a la adivinanza, si no llega a encontrar la respues usted no es un verdadero fan de LINKIN PARK. <br>
-      SUERTE.</p>
-  </div>
-  <br> <br>
-
-  <div id="contenedor" class="container border">
-
-    <h2 style="text-align: center;">Pregunta</h2>
-    <p style="text-align: center;">INTENTOS:</p>
-    <p style="text-align: center;" id="Numintentos"></p>
-    <br>
-
-    <p style="text-align: center;" id="pregunta"> Cual fue el álbum debut de la banda?</p>
-    <br>
-    <p id="pregunta2"></p>
-    <!--2da pregunta para facilitar-->
-    <p id="aviso"></p>
-    <!--Aviso-->
-
-    <input id="texto" type="text" class="form-control" placeholder="Ingrese su respuesta">
-
-    <!-- <button id="boton" type="button" onclick="adivinanza()" value="envio" class="btn btn-primary">Aceptar</button> -->
-  </div>
-  <br> <br>
-  <form action="">
-
+  <div class="caja_fondo">
     <div class="container border">
-      <label for="respuesta">Respuesta :</label>
-      <input id='respuesta' type="text" class="form-control" placeholder="Ingrese su respuesta">
-
-      <button type="submit" onclick=" return  adivinanza()" value="enviar" class="btn btn-primary">Aceptar</button>
-      <br><br>
+      <h2 style="text-align: center; color: white;">Consigna</h2>
+      <p>Se le mostrara un texto con una adivinanza haciendo referencia al tema del sitio web, dispondra de 4 intentos
+        para acertar a la adivinanza, si no llega a encontrar la respues usted no es un verdadero fan de LINKIN PARK.
+        <br>
+        SUERTE.</p>
     </div>
+    
+  </div>
+  <div class="caja_fondo">
 
-  </form>
 
-  
+    <div id="contenedor" class="container border">
+
+      <h2 style="text-align: left; ">Pregunta</h2>
+      <p style="text-align: left; ">INTENTOS:</p>
+      
+      <!-- <p style="text-align: center;" id="numintentos">4</p> -->
+      
+      <input style="text-align: center; width: 30px;
+      background-color: rgb(99, 129, 38); color: black;" id="numintentos" type="text" disabled="disabled" value="4">
+      
+
+      <p style="text-align: center;" id="pregunta"> Cual fue el álbum debut de la banda?</p>
+      <br>
+      <p id="pregunta2"></p>
+      <!--2da pregunta para facilitar-->
+      <!-- <input id="texto" type="text" class="form-control" placeholder="Ingrese su respuesta"> -->
+      <!-- <button id="boton" type="button" onclick="adivinanza()" value="envio" class="btn btn-primary">Aceptar</button> -->
+    </div>
+    <br>
+
+    <form action="">
+
+      <div class="container border">
+
+        <label for="respuesta">Respuesta :</label>
+
+        <input id='respuesta' type="text" class="form-control" placeholder="Ingrese su respuesta">
+
+        <button type="button" onclick="adivinanza();" value="enviar" class="btn btn-primary">Aceptar</button>
+        <br><br>
+      </div>
+
+    </form>
+  </div>
+
+
 
 
 

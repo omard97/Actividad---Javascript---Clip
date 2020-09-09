@@ -175,15 +175,21 @@
  font-size: 25px;
 }
 
-
-/* .caja_pregunta{ 
+.caja_fondo{
+  background-color: rgb(21, 66, 28);
+  margin: 20px;
+  border-radius: 15px;
+  padding: 30px;
+  box-shadow:  5px 5px 20px rgb(6, 46, 13);
+}
+.caja_pregunta{ 
   background-color: rgb(21, 98, 34);
   margin: 20px;
   border-radius: 15px;
   padding: 30px;
   box-shadow:  5px 5px 20px rgb(6, 46, 13);
   
-} */
+}
 
 /* contenedor de las preguntas */
 .container {
@@ -196,6 +202,8 @@
   /* margin: 3px; */
   color: whitesmoke;
 }
+
+
 #contenedor button{
   margin: 10px;
 }
