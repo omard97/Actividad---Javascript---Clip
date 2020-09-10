@@ -3,14 +3,19 @@
 
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- <meta name="viewport" content="width=device-width, initial-scale=1.0"> -->
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <title>Juego</title>
   <!-- Bootstrap CSS -->
-  <link rel="stylesheet" href="../css/bootstrap.min.css">
+  <!-- <link rel="stylesheet" href="../css/bootstrap.min.css"> -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 
   <link rel="stylesheet" href="Estilos_Paginas.css">
 
   <link rel="stylesheet" href="../css/normalize.css">
+
+  <link rel="icon" type="image/jpg" href="../Imagenes/icono.png">
 
 
 
@@ -19,7 +24,7 @@
 <body class="body_juego">
 
   <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-    <a class="navbar-brand" href="#">Paginas</a>
+    <a class="navbar-brand" href="#">Páginas</a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02"
       aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
@@ -28,7 +33,7 @@
     <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
       <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
         <li class="nav-item active">
-          <a class="nav-link" href="../Index.html" target="_blank">Pagina Principal <span
+          <a class="nav-link" href="../Index.html" target="_blank">Página Principal <span
               class="sr-only">(current)</span></a>
         </li>
         <li class="nav-item">
@@ -41,7 +46,7 @@
 
     </div>
   </nav>
-  <div class="jumbotron text-center">
+  <div style="border-bottom: groove 2px rgb(207, 200, 200);" class="jumbotron text-center">
     <h1>Mini Juego</h1>
     <p>Bienvenido al area entretenimiento, se va a poner a prueba su conocimiento sobre la reconocida banda de rock
       llamada LINKIN PARK.
@@ -51,32 +56,29 @@
     <div class="container border">
       <h2 style="text-align: center; color: white;">Consigna</h2>
       <p>Se le mostrara un texto con una adivinanza haciendo referencia al tema del sitio web, dispondra de 4 intentos
-        para acertar a la adivinanza, si no llega a encontrar la respues usted no es un verdadero fan de LINKIN PARK.
+        para acertar a la adivinanza, si no llega a encontrar la respuesta usted no es un verdadero fan de LINKIN PARK.
         <br>
         SUERTE.</p>
     </div>
-    
+
   </div>
   <div class="caja_fondo">
 
 
-    <div id="contenedor" class="container border">
+    <div id="contenedor_pregunta" class="container border">
 
-      <h2 style="text-align: left; ">Pregunta</h2>
-      <p style="text-align: left; ">INTENTOS:</p>
-      
+      <h2 style="font-size: 45px;">Pregunta/s</h2>
+      <p>INTENTOS:</p>
+
       <!-- <p style="text-align: center;" id="numintentos">4</p> -->
-      
-      <input style="text-align: center; width: 30px;
-      background-color: rgb(99, 129, 38); color: black;" id="numintentos" type="text" disabled="disabled" value="4">
-      
 
-      <p style="text-align: center;" id="pregunta"> Cual fue el álbum debut de la banda?</p>
-      <br>
-      <p id="pregunta2"></p>
-      <!--2da pregunta para facilitar-->
-      <!-- <input id="texto" type="text" class="form-control" placeholder="Ingrese su respuesta"> -->
-      <!-- <button id="boton" type="button" onclick="adivinanza()" value="envio" class="btn btn-primary">Aceptar</button> -->
+      <input class="visor_contador" id="numintentos" type="text" disabled="disabled" value="4">
+
+
+      <p style="text-align: center;" id="pregunta"> 1) Cual fue el álbum debut de la banda?</p>
+
+      <p id="pista1"></p>
+      <p id="pista2"></p>
     </div>
     <br>
 
@@ -88,28 +90,114 @@
 
         <input id='respuesta' type="text" class="form-control" placeholder="Ingrese su respuesta">
 
-        <button type="button" onclick="adivinanza();" value="enviar" class="btn btn-primary">Aceptar</button>
+        <button id="btn1" type="button" onclick="adivinanza();" value="enviar" class="btn btn-primary">Aceptar</button>
         <br><br>
-      </div>
 
+
+
+        <!-- alertas -->
+        <div id="alerta" class="alert alert-dark" role="alert">
+          <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span
+              aria-hidden="true">&times;</span></button>
+          Que comience el juego.
+        </div>
+
+        
+
+
+        <div id="alerta2" class="alert alert-success alert-dismissible fade show" role="alert">
+          <strong>¡FELICITACIONES!</strong> ganaste el juego!!!
+          Actualiza la pagina para volver a empezar.
+          <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+
+        <div id="alerta3"class="alert alert-danger alert-dismissible fade show" role="alert">
+          <strong>¡CUIDADO!</strong> Estas tratando de responder sin haber escrito una palabra, por favor ingrese su respuesta.
+          <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+
+        <div id="alerta4"class="alert alert-danger alert-dismissible fade show" role="alert">
+          <strong>¡PERDISTE!</strong> Actualiza la pagina para volver a empezar y completar la adivinanza.
+          <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+
+
+
+      </div>
     </form>
   </div>
 
-
-
+  <div class="footer">
+    <footer>
+        Sitio web creado utilizando:
+        <ul>
+            <li>HTML 5</li>
+            <li>CSS</li>
+            <li>Boostrap 4</li>
+            <li>Javascript</li>
+        </ul>
+        <p>© 1997-2020 D'Andrea Omar Todos los derechos reservados.</p>
+    </footer>
+</div>
 
 
   <script src="App.js"></script>
 
   <!-- Optional JavaScript -->
   <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
-    integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <!--    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>-->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+    integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
     crossorigin="anonymous"></script>
-  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
-    integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+    integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
     crossorigin="anonymous"></script>
-  <script src="../js/bootstrap.min.js"></script>
+
+
+  <script>
+    //Cuando automaticamente inicie el documento la alerta no se 
+    //va a visualizar
+    $(document).ready(function () {
+      $("#alerta").hide();
+      $("#alerta2").hide();
+      $("#alerta3").hide();
+      $("#alerta4").hide();
+    })
+
+
+
+
+    // let num = document.getElementById("numintentos");
+    // let valor = num;
+    // if (num >= 1 && num <= 3) {
+    //aparicion de la alerta
+
+
+    //Autocierre de la alerta
+    // window.setTimeout(function () {
+    //   $("#alerta").fadeTo(1500, 0).slideDown(1000, function () {
+    //     $(this).remove();
+    //   });
+    // }, 3000); //2 segundos y desaparece
+
+    // } else {
+    // $(document).ready(function () {
+    //   $("#alerta").hide();
+
+    // })
+
+    // }
+
+  </script>
+
+
 
 </body>
 

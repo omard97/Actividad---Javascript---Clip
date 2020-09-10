@@ -105,6 +105,31 @@
 }
 
 
+.footer {
+  background-color: rgb(29, 27, 27);
+ 
+  color: white;
+  text-align: center;
+  font-size: 15px;
+  padding: 20px;
+  margin: auto;
+  margin-top: 10px;
+  border-top: groove 2px rgb(207, 200, 200);
+}
+.footer ul li{
+  text-align: center;
+  list-style:none
+}
+.footer p{
+  background-color: rgb(29, 27, 27);
+ 
+  color: white;
+  text-align: center;
+  font-size: 15px;
+  bottom: 0px;
+}
+
+
 /* ************* CANCIONES *********** */
 
 .body_canciones{
@@ -113,7 +138,7 @@
   font-family: Century Gothic;
   
 }
-#header_logo{
+.header_logo{
   background-image: url(img/music1.jpg);
   margin: 0px;
   background-position: center;
@@ -196,6 +221,7 @@
   box-shadow:  5px 5px 20px rgb(82, 156, 88); /*sombreado de bordes*/
   background-color: rgb(99, 129, 38); /*color de fondo*/
   border-radius: 10px;
+
   
 }
 .container p{
@@ -203,6 +229,19 @@
   color: whitesmoke;
 }
 
+.visor_contador{
+  text-align: center;
+  width: 30px;
+ background-color: rgb(99, 129, 38);
+  color: black;
+  font-size: 20px;
+}
+
+#contenedor_pregunta{
+  width: 400px;
+  text-align: center;
+  
+}
 
 #contenedor button{
   margin: 10px;
@@ -222,3 +261,10 @@ label{
   text-align: center;
 }
 
+/* editar ancho de la tabla para que no se desconfigure */
+@media (max-width: 409px) {
+  .body_juego {
+    min-width: 409px;
+    
+  }
+}

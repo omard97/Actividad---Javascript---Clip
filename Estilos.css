@@ -185,11 +185,27 @@ li {
   
 }
 
+
 .footer {
   background-color: rgb(29, 27, 27);
  
   color: white;
-  text-align: left;
+  text-align: center;
+  font-size: 15px;
+  padding: 20px;
+  margin: auto;
+  margin-top: 10px;
+  border-top: groove 2px rgb(207, 200, 200);
+}
+.footer ul li{
+  text-align: center;
+  list-style:none
+}
+.footer p{
+  background-color: rgb(29, 27, 27);
+ 
+  color: white;
+  text-align: center;
   font-size: 15px;
   bottom: 0px;
 }
@@ -205,9 +221,4 @@ li {
 
 
 
-/* SOCIAL */
-.botonimagen {
-  background-image: url(https://icon-icons.com/icons2/195/PNG/48/YouTube_23392.png);
-  width: 52px;
-  height: 52px;
-}
+
